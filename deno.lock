@@ -16,6 +16,7 @@
     "jsr:@std/path@0.218": "0.218.2",
     "npm:@types/node@*": "22.5.4",
     "npm:create-vite-extra@latest": "2.4.1",
+    "npm:create-vite@latest": "5.5.3",
     "npm:path-to-regexp@6.2.1": "6.2.1",
     "npm:prisma@latest": "5.21.1"
   },
@@ -124,6 +125,9 @@
         "picocolors",
         "prompts"
       ]
+    },
+    "create-vite@5.5.3": {
+      "integrity": "sha512-7ooDS8IsvxMd8axuA70makifVe9Oo5Pa/oTh8ykClKSYbpSbIAZF/pkitv3yWe8OKcJGyLWuta/touAsr4qang=="
     },
     "fsevents@2.3.3": {
       "integrity": "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw=="

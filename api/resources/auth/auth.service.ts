@@ -18,7 +18,7 @@ export class AuthService {
   ): Promise<{ id: string; email: string }> {
     const hashedPassword = await hashPassword(password);
 
-    return await this.prisma.user.create({
+    return await this.prisma.auth_user.create({
       data: {
         id: crypto.randomUUID(),
         email,
@@ -36,7 +36,7 @@ export class AuthService {
     email: string,
     password: string,
   ): Promise<{ user: { id: string; email: string }; token: string } | null> {
-    const user = await this.prisma.user.findUnique({
+    const user = await this.prisma.auth_user.findUnique({
       where: { email },
       select: {
         id: true,

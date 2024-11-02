@@ -2,7 +2,7 @@ import { Router } from "https://deno.land/x/oak@v12.6.1/mod.ts";
 import { UserService } from "./user.service.ts";
 import prisma from "../../../prisma/prisma.ts";
 
-const router = new Router({ prefix: "/users" });
+const router = new Router({ prefix: "/api/users" });
 const userService = new UserService(prisma);
 
 router

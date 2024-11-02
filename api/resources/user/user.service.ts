@@ -8,14 +8,14 @@ export class UserService {
   }
 
   async getUserProfileById(id: string) {
-    const profile = await this.prisma.userProfile.findFirstOrThrow({
+    const profile = await this.prisma.user_profile.findFirstOrThrow({
       where: { id },
     });
     return profile;
   }
 
   async getAllUsers() {
-    const all_users = await this.prisma.userProfile.findMany();
+    const all_users = await this.prisma.user_profile.findMany();
     return all_users;
   }
 }

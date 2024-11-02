@@ -4,6 +4,7 @@
     "db:push": "deno run -A npm:prisma@latest db push",
     "generate": "deno run -A --unstable npm:prisma@latest generate --no-engine",
     "dev:api": "deno run -A --env --watch api/main.ts",
+    "dev:client": "cd client && deno task dev",
     "prisma": "deno run -A npm:prisma@latest",
     "db:seed": "deno run -A --env prisma/seed.ts",
     "db:studio": "deno task prisma studio",

@@ -10,7 +10,7 @@ datasource db {
   schemas  = ["auth", "users"]
 }
 
-model user {
+model auth_user {
   id                String    @id @db.Uuid
   created_at        DateTime  @default(now())
   updated_at        DateTime  @updatedAt
@@ -33,8 +33,8 @@ model user_profile {
   username   String    @unique
   biography  String?   @db.VarChar(250)
 
-  auth_user    user   @relation(fields: [auth_user_id], references: [id])
-  auth_user_id String @db.Uuid
+  auth_user    auth_user @relation(fields: [auth_user_id], references: [id])
+  auth_user_id String    @db.Uuid
 
   @@map("user_profiles")
   @@schema("users")

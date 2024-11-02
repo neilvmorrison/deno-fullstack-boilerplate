@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "dev": "deno run --watch api/main.ts",
+    "db:push": "deno run -A npm:prisma@latest db push",
+    "generate": "deno run -A --unstable npm:prisma@latest generate --no-engine",
+    "dev:api": "deno run -A --env --watch api/main.ts",
+    "prisma": "deno run -A npm:prisma@latest",
+    "db:seed": "deno run -A --env prisma/seed.ts",
+    "db:studio": "deno task prisma studio",
+    "db:migrate": "deno task prisma migrate dev --create-only --name",
+    "db:migrate-full-migration": "deno task prisma migrate dev"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1",
+    "oak": "jsr:@oak/oak@^14.1.1",
+    "prisma": "./generated/client/deno/edge.ts"
+  }
+}

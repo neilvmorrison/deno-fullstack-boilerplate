@@ -1,9 +1,5 @@
 // import { PrismaClient } from "../generated/client/deno/index.d.ts";
 import { seedUsers } from "./seeds/users.ts";
-import { seedCommunities } from "./seeds/communities.ts";
-import { seedPosts } from "./seeds/posts.ts";
-import { seedComments } from "./seeds/comments.ts";
-import { seedVotes } from "./seeds/votes.ts";
 import prisma from "./prisma.ts";
 
 async function main() {
@@ -12,10 +8,6 @@ async function main() {
 
     // Order matters due to relationships
     await seedUsers(prisma);
-    await seedCommunities(prisma);
-    await seedPosts(prisma);
-    await seedComments(prisma);
-    await seedVotes(prisma);
 
     console.log("Seed completed successfully!");
   } catch (error) {

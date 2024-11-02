@@ -1,4 +1,4 @@
-import type { PrismaClient } from "../../../generated/client/deno/index.d.ts";
+import type { PrismaClient } from "../../../generated/client/deno/edge.ts";
 
 export class UserService {
   prisma: PrismaClient;

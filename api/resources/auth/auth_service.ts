@@ -1,4 +1,4 @@
-import type { PrismaClient } from "../../../generated/client/deno/edge.ts";
+import { PrismaClient } from "../../../generated/client/deno/edge.ts";
 import {
   comparePasswords,
   generateJWT,
